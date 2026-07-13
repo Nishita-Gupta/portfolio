@@ -24,6 +24,7 @@ export const education = {
   degree: "B.Tech, Computer Science and Engineering",
   school: "Vellore Institute of Technology, Amaravati",
   period: "2023 — Present",
+  detail: "CGPA 8.36",
 };
 
 export const experience = {
