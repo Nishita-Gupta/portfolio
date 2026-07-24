@@ -12,7 +12,7 @@ export const profile = {
 };
 
 export const about = {
-  who: "I'm a third-year Computer Science and Engineering student at VIT-AP University. Most of my time outside coursework goes into building products end-to-end — from data model to pixel.",
+  who: "I'm a fourth-year Computer Science and Engineering student at VIT-AP University. Most of my time outside coursework goes into building products end-to-end — from data model to pixel.",
   interest:
     "I'm drawn to real-time, multi-user software: the kind of interface where several people are looking at the same screen at once and everything has to stay in sync without feeling fragile.",
   learning:
@@ -24,7 +24,7 @@ export const education = {
   degree: "B.Tech, Computer Science and Engineering",
   school: "Vellore Institute of Technology, Amaravati",
   period: "2023 — Present",
-  detail: "CGPA 8.36",
+  detail: "CGPA 8.42",
 };
 
 export const experience = {
