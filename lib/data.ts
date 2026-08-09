@@ -8,7 +8,7 @@ export const profile = {
   githubHandle: "github.com/Nishita-Gupta",
   linkedin: "https://linkedin.com/in/nishita-gupta1",
   linkedinHandle: "linkedin.com/in/nishita-gupta1",
-  resumeFile: "/resume.pdf",
+  resumeFile: "/Nishita_Gupta.pdf",
 };
 
 
