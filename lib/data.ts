@@ -1,7 +1,7 @@
 export const profile = {
   name: "Nishita Gupta",
   role: "Computer Science Student & Aspiring Full-Stack Developer",
-  tagline: "I build fast, real-time interfaces — and the systems that keep them in sync.",
+  tagline: "I build for the web, from pixels to production.",
   location: "Amaravati, Andhra Pradesh, India",
   email: "nishitagupta2005@gmail.com",
   github: "https://github.com/Nishita-Gupta",
@@ -11,20 +11,26 @@ export const profile = {
   resumeFile: "/resume.pdf",
 };
 
+
 export const about = {
-  who: "I'm a fourth-year Computer Science and Engineering student at VIT-AP University. Most of my time outside coursework goes into building products end-to-end — from data model to pixel.",
+  who: "I'm a fourth-year Computer Science and Engineering student at VIT-AP University. I enjoy building products end-to-end — from designing the backend and data layer to crafting the interface users actually interact with.",
+
   interest:
-    "I'm drawn to real-time, multi-user software: the kind of interface where several people are looking at the same screen at once and everything has to stay in sync without feeling fragile.",
+    "I'm especially interested in full-stack development and real-time systems — building software where the frontend, backend, and data layer work together seamlessly and reliably.",
+
   learning:
-    "I'm currently deepening my data science toolkit — Python, NumPy, Pandas-adjacent analysis and visualization with Matplotlib and Seaborn — alongside continued work on full-stack TypeScript.",
-  goal: "My goal is to start my career as a software engineer on a product team, building interfaces that are as reliable under real usage as they are considered in design.",
+    "I'm currently strengthening my software engineering fundamentals through Java, data structures and algorithms, while continuing to build full-stack applications with React, Next.js, Node.js, Express, and MongoDB.",
+
+  goal: "My goal is to start my career as a software engineer, working on real products where I can contribute across the stack, solve meaningful problems, and keep growing as an engineer.",
 };
+
+
 
 export const education = {
   degree: "B.Tech, Computer Science and Engineering",
   school: "Vellore Institute of Technology, Amaravati",
   period: "2023 — Present",
-  detail: "CGPA 8.42",
+  detail: "CGPA 8.45",
 };
 
 export const experience = {
