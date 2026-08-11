@@ -20,12 +20,12 @@ const cardsConfig = [
     Component: AboutCard,
   },
   {
-    id: "project",
-    
-    label: "Featured Project",
-    span: "sm:col-span-2 sm:row-span-2",
-    Component: ProjectCard,
-  },
+  id: "project",
+  cell: "D2",
+  label: "Featured Project",
+  span: "sm:col-span-2 sm:row-span-2",
+  Component: ProjectCard,
+},
   {
     id: "skills",
     

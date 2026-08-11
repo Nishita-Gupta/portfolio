@@ -73,29 +73,60 @@ export const skills = [
   },
 ];
 
-export const featuredProject = {
-  name: "CollabSheet",
-  tagline: "A real-time collaborative spreadsheet, built down to first principles.",
-  year: "2025",
-  stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
-  github: "https://github.com/Nishita-Gupta",
-  problem:
-    "Spreadsheets are one of the hardest UI surfaces to make collaborative: many cursors, many edits, and a grid that has to feel instant even while it's talking to a server. The brief was to build a lightweight Google Sheets analogue and be deliberate about where state lives, how contention is handled, and what not to build.",
-  solution:
-    "I built a scrollable, numbered grid with live multi-user editing powered by Firestore's onSnapshot listeners and debounced writes, so concurrent edits converge without stepping on each other. A presence layer, backed by the Firebase Realtime Database, shows who else is in the document, their color, and the cell they currently have selected.",
-  features: [
-    "Real-time sync across every open session of a document, with a write-state indicator so users always know whether their change has landed",
-    "A custom formula parser supporting =SUM, =AVERAGE, =MAX, =MIN and arithmetic expressions across cell references",
-    "Live presence: active collaborators, their assigned colors, and their selected cells, updated in real time",
-    "Cell formatting, column and row resizing, full keyboard navigation, dark mode and CSV export",
-    "Google OAuth and guest authentication, deployed on Vercel with a strict, zero-error TypeScript build",
-  ],
+export type Project = {
+  id: string;
+  name: string;
+  tagline: string;
+  year: string;
+  stack: string[];
+  github: string;
+  live?: string;
+  problem: string;
+  solution: string;
+  features: string[];
 };
 
-export const secondaryProject = {
-  name: "Personal Portfolio",
-  tagline: "An earlier portfolio focused on clean, reusable React components.",
-  stack: ["React", "Tailwind CSS"],
-  detail:
-    "A responsive portfolio site built with reusable React components and a clean, mobile-friendly UI using Tailwind CSS — the predecessor to this one.",
-};
+export const projects: Project[] = [
+  {
+    id: "projectpulse",
+    name: "ProjectPulse",
+    tagline:
+      "A collaborative project management platform for developer teams, with live-computed productivity analytics.",
+    year: "2026",
+    stack: ["React 19", "Vite", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT"],
+    github: "https://github.com/Nishita-Gupta/ProjectPulse",
+    live: "https://project-pulse-seven-kohl.vercel.app",
+    problem:
+      "Most student MERN projects stop at basic CRUD todo apps. ProjectPulse was built to go further — real role-based permissions enforced server-side, analytics computed live from actual data instead of hardcoded numbers, and two independent authentication strategies.",
+    solution:
+      "A full MERN application with stateless JWT authentication throughout — both email/password with bcrypt hashing, and Google OAuth 2.0 with server-side ID token verification. Role-based access control runs through custom Express middleware, and the analytics dashboard is built entirely on MongoDB aggregation pipelines rather than application-level computation.",
+    features: [
+      "Two independent auth strategies: email/password with bcrypt + JWT, and Google OAuth 2.0 verified server-side",
+      "Role-based access control (Owner/Member) enforced server-side via custom Express middleware, not just hidden in the UI",
+      "Full task management: CRUD with status, priority, due dates, labels, and membership-validated assignment",
+      "Threaded comments per task with author-only deletion",
+      "Live analytics dashboard — completion rate, a weighted productivity score, activity charts, streaks, week-over-week growth, and per-member contribution — all computed via MongoDB aggregation pipelines",
+      "Centralized error handling via a custom asyncHandler wrapper and shared Express error middleware",
+    ],
+  },
+  {
+    id: "collabsheet",
+    name: "CollabSheet",
+    tagline: "A real-time collaborative spreadsheet, built down to first principles.",
+    year: "2025",
+    stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    github: "https://github.com/Nishita-Gupta/collabsheets",
+    live: "https://collabsheets.vercel.app",
+    problem:
+      "Spreadsheets are one of the hardest UI surfaces to make collaborative: many cursors, many edits, and a grid that has to feel instant even while it's talking to a server. The brief was to build a lightweight Google Sheets analogue and be deliberate about where state lives, how contention is handled, and what not to build.",
+    solution:
+      "I built a scrollable, numbered grid with live multi-user editing powered by Firestore's onSnapshot listeners and debounced writes, so concurrent edits converge without stepping on each other. A presence layer, backed by the Firebase Realtime Database, shows who else is in the document, their color, and the cell they currently have selected.",
+    features: [
+      "Real-time sync across every open session of a document, with a write-state indicator so users always know whether their change has landed",
+      "A custom formula parser supporting =SUM, =AVERAGE, =MAX, =MIN and arithmetic expressions across cell references",
+      "Live presence: active collaborators, their assigned colors, and their selected cells, updated in real time",
+      "Cell formatting, column and row resizing, full keyboard navigation, dark mode and CSV export",
+      "Google OAuth and guest authentication, deployed on Vercel with a strict, zero-error TypeScript build",
+    ],
+  },
+];
